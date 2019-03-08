@@ -17,7 +17,7 @@
             height: 903px;
         }
         </style>
-        <title></title>
+        <title>GEOVISOR CHINGON</title>
     </head>
     <body>
         <div id="map">
@@ -362,6 +362,9 @@
         map.createPane('pane_Jerarquizacion_vial_3');
         map.getPane('pane_Jerarquizacion_vial_3').style.zIndex = 403;
         map.getPane('pane_Jerarquizacion_vial_3').style['mix-blend-mode'] = 'normal';
+            var wmsLayer = L.tileLayer.wms('http://ws-idesc.cali.gov.co:8081/geoserver/wms?service=WMS&version=1.1.0', {
+    layers: 'idesc:mc_barrios'
+}).addTo(map);
         var layer_Jerarquizacion_vial_3 = new L.geoJson(json_Jerarquizacion_vial_3, {
             attribution: '',
             pane: 'pane_Jerarquizacion_vial_3',
